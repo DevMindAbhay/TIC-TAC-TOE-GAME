@@ -1,74 +1,95 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
-    background-color: #089da0;
-    text-align: center;
-  }
-  
-  .container {
-    height: 70vh;
+}
+
+
+.background {
+    background-color: #f0f0f0;
+    font-family: 'Itim', cursive;
+    height: 100vh;
     display: flex;
-  
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .game {
-    height: 60vmin;
-    width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
-  }
-  
-  .box {
-    height: 18vmin;
-    width: 18vmin;
-    border-radius: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    font-size: 8vmin;
-    color: #b0413e;
-    background-color: #ffffc7;
-  }
-  
-  #reset-btn {
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color: #fff;
-    border-radius: 1rem;
-    border: none;
-  }
-  
-  #new-btn {
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color: #fff;
-    border-radius: 1rem;
-    border: none;
-  }
-  
-  #msg {
-    color: #ffffc7;
-    font-size: 5vmin;
-  }
-  
-  .msg-container {
-    height: 100vmin;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 4rem;
-  }
-  
-  .hide {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title {
+    text-align: center;
+    margin-top: 20px
+}
+
+.title h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Style the display section */
+.display {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style the container for the game grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Style individual tiles */
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Style the player X and O marks */
+.tile.markX {
+    color: #f44336;
+}
+
+.tile.markO {
+    color: #2196f3;
+}
+
+/* Style the announcer section */
+.announcer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.hide {
     display: none;
-  }
+}
+
+/* Style the reset button */
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#reset {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#reset:hover {
+    background-color: blueviolet;
+}
